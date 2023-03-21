@@ -22,6 +22,8 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
+import authRoutes from "./routes/auth.js";
+import { register } from "./controllers/auth";
 
 // File Storage
 
@@ -33,9 +35,12 @@ const storage = multer.diskStorage({
     cb(null, file.originalname);
   },
 });
+
 const upload = multer({ storage });
 
-app.post;
+app.post("/auth/register", upload.single("picture"), register);
+
+app.use("/auth", authRoutes);
 
 // Mongoose setup
 const PORT = process.env.PORT || 6001;

@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 const { Schema, model, default: mongoose } = require("mongoose");
 
 // Email validator
@@ -44,6 +46,12 @@ const UserSchema = new Schema(
     },
     impressions: {
       type: Number,
+    },
+    location: {
+      type: String,
+    },
+    occupation: {
+      type: String,
     },
   },
   { timestamps: true }
