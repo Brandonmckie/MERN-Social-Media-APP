@@ -74,7 +74,8 @@ const userWidget = ({ userId, picturePath }) => {
             </Typography>
             <Typography color={medium}> {friends.length} friends</Typography>
           </Box>
-          <ManageAccountsOutlined />
+        </FlexBetween>
+        <ManageAccountsOutlined />
         </FlexBetween>
         <Divider />
         <Box p=".9rem 0">
@@ -87,6 +88,7 @@ const userWidget = ({ userId, picturePath }) => {
             <Typography color={medium}>{occupation}</Typography>
           </Box>
         </Box>
+        <Divider />
         {/*third row */}
         <Box p="1rem 0">
           <FlexBetween mb="0.5rem">
@@ -102,6 +104,7 @@ const userWidget = ({ userId, picturePath }) => {
             </Typography>
           </FlexBetween>
         </Box>
+        <Divider />
         <Box p="0.9rem 0">
           <Typography fonstize="1rem" color={main} fontWeight="500" mb="1rem">
             Community Profiles
@@ -135,7 +138,7 @@ const userWidget = ({ userId, picturePath }) => {
             <EditOutlined sx={{ color: main }} />
           </FlexBetween>
         </Box>
-      </FlexBetween>
+
     </WidgetWrapper>
   );
 };
