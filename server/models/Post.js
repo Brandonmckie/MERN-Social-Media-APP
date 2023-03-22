@@ -1,5 +1,5 @@
-const { Schema, model, default: mongoose, Types } = require("mongoose");
-const User = require("./User");
+import { Schema, model, mongoose, Types } from "mongoose";
+import User from "./User.js";
 
 const PostSchema = new Schema(
   {
@@ -38,4 +38,4 @@ const PostSchema = new Schema(
 
 const Post = mongoose.model("Post", PostSchema);
 
-module.exports = Post;
+export default Post;

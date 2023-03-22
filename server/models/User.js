@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
-
-const { Schema, model, default: mongoose } = require("mongoose");
-
+import { Schema } from "mongoose";
 // Email validator
 
 var validateEmail = function (email) {
@@ -59,4 +57,4 @@ const UserSchema = new Schema(
 
 const User = mongoose.model("User", UserSchema);
 
-module.exports = User;
+export default User;
